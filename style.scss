@@ -1,0 +1,467 @@
+
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$police-txt:'roboko', sans-serif;
+$police-logo:'Shrikhand', cursive;
+
+@mixin a-comportement{
+    text-decoration: none;
+    color:black;
+}
+
+@mixin lettre-dégradée{
+    background: linear-gradient($color-primary,$color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+
+#bloc_page
+{max-width: 768px;
+margin: auto;
+border-right: 1px black solid;
+border-left: 1px black solid;
+font-family:$police-txt;}
+
+header{
+    text-align: center;
+    & img{
+        width: 45%;
+    }
+}
+
+
+.loc{
+    
+    background: #ededed;
+    border-top: #c4c4c4 solid 1px;
+    border-bottom: #c4c4c4 solid 1px;
+    
+    &--txt{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 55px;
+        @include a-comportement;
+        & h5{
+            font-size: 15px;
+            margin-left: 20px;
+        }
+    }
+    
+    }
+
+.explore{
+    background:#f7f7f7;
+    &--txt{
+        display: flex;
+        flex-direction: column;
+        width: 75%;
+        margin: auto;
+        text-align: center;
+        
+    }
+    & h1{
+        margin: 0;
+        font-size: 22px;
+        padding-top: 30px;
+    }
+    & a{
+        
+        border-radius: 25px;
+        width: 70%;
+        font-size: 14px;
+        margin: auto;
+        padding-left:11px;
+        padding-right: 11px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        @include a-comportement;
+        color: white;
+        background: linear-gradient($color-secondary,$color-primary);
+        margin-top: 15px;
+        margin-bottom: 65px;
+        box-shadow: 0px 4px 5px 0px #c4c4c4 ;
+        transition:all 500ms;
+
+        &:hover{
+            background: linear-gradient($color-primary,$color-secondary);
+            transform: scale(1.05);
+        }
+    }
+}
+
+
+.fonctionnement{
+    & h2{
+        width: 80%;
+        margin: auto;
+        font-size: 17px;
+        margin-top: 40px;
+    }
+    &--nav{
+        & ul{
+            list-style-type: none;
+            padding: 0;
+            counter-reset: section;
+        }       
+        
+       
+        
+        & li{
+            width: 80%;
+            margin: auto;
+            background: #f7f7f7;
+            margin-bottom: 20px;
+            border-radius: 17px;
+            box-shadow: 0px 4px 5px 0px #c4c4c4;
+            transition: transform 500ms;
+
+            & a{
+                @include a-comportement;
+                display: flex;
+                align-items: center;
+                height: 60px;
+           
+        
+                &::before{
+                    position: absolute;
+                    border-radius: 50%;
+                    background: $color-primary;
+                    padding-top: 5px;
+                    padding-bottom: 5px;
+                    padding-left: 8px;
+                    padding-right: 8px;
+                    font-size: 10px;
+                    color: white;
+                    margin-left: -10px;
+                    counter-increment: section 1;
+                    content: counter(section);
+                    
+                }
+
+                & i{
+                    margin-left: 30px;
+                    color:#969696 ;
+                    
+                
+                    }
+                
+
+                & h4{
+                    margin-left: 6%;
+                    font-size: 13px;
+                    
+                }
+
+            }
+                
+
+            &:hover{
+                background: rgba($color-primary, 0.1);
+                transform: scale(1.07);
+                & i{
+                    color: $color-primary;
+                }
+
+            }
+            
+
+        }
+         
+        
+          
+            
+            
+       
+        
+        
+    }
+}
+
+.presentation{
+    background: #f7f7f7;
+    padding-bottom: 40px;
+
+    & h2{
+        font-size: 17px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        width: 90%;
+        margin: auto;
+    }
+
+    &--media{
+
+        display: flex;
+        flex-direction: column;
+
+        & a{
+                @include a-comportement;
+                transition: all 500ms;
+                width: 100%;
+                &:hover{
+                    transform: scale(1.05);
+                }       
+                
+            }
+
+    }
+    
+    
+
+    &--fig{
+        display: flex;
+        flex-direction: column;
+        margin: 0; 
+        width: 90%;
+        margin: auto;
+    
+        &--img{
+            margin: 0;
+            display: flex;
+            position: relative;
+            
+        
+            & img{
+                object-fit: cover;
+                width: 100%;
+                height: 180px;
+                border-radius: 15px 15px 0 0;
+            }
+
+            & p{
+                position: absolute;
+                border-radius: 3px;
+                text-align: end;
+                font-size: 12px;
+                background:$color-tertiary;
+                font-weight: bold;
+                color: #1e6d2b;
+                padding-top: 7px;
+                padding-bottom: 7px;
+                padding-left: 15px;
+                padding-right: 15px;
+                right: 15px;
+            }
+        }
+
+        & figcaption{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            background: white;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0px 4px 5px 0px #c4c4c4 ;
+        }
+
+        &--txt{
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+            & h3{
+                margin: 0;
+                padding-top: 15px;
+                font-size: 15px;
+            }
+            & p{
+                margin: 0;
+                font-size: 15px;
+                padding-bottom: 15px;
+
+            }
+            
+
+        }
+
+        & i{
+            margin-right: 30px;
+            font-size: 20px;
+            &:hover{
+                color: red;
+            }
+         
+    }
+
+    
+           
+
+    }
+}
+
+.bdp{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    background: #2d2d2d;
+    color: white;
+    &--txt{
+        width: 90%;
+        margin: auto;
+        & h5{
+            font-family: $police-logo;
+            font-size: 16px;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            
+        }
+        & nav{
+            padding-bottom: 30px;
+            & a{
+                @include a-comportement;
+                color: white;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                margin-bottom: 8px;
+
+                &:hover{
+                    @include lettre-dégradée;
+                }
+
+                & i{
+                    margin-right: 15px;
+                }
+            }
+            
+            
+                
+        }
+    }
+}
+
+@media all and (min-width:768px) {
+
+    #bloc_page{
+        min-width: 768px;
+        max-width: 1200px;
+    }
+
+    .loc{
+        & h5{
+            font-size: 17px;
+        }
+    }
+
+    .explore{
+        & h1{
+            font-size: 25px;
+        }
+
+        & p{
+            font-size: 17px;
+        }
+        & a{
+            width: 40%;
+            font-size: 16px;
+        }
+    }
+
+    .fonctionnement{
+        margin-bottom: 50px;
+        & h2{
+            margin-top: 50px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-size: 20px;
+        }
+        &--nav{
+
+            width: 95%;
+            margin: auto;
+
+            & ul{
+                display: flex;
+                justify-content: space-between;
+            }
+            
+            & li{
+                width: 30%;
+
+                
+                & h4{
+                    font-size: 15px;
+                    }
+
+                }
+
+                
+
+                
+
+                
+        }
+
+        
+        
+    }
+
+    .presentation{
+
+        padding-bottom: 20px;
+
+        & h2{
+            padding-top: 60px;
+            padding-bottom: 60px;
+            text-align: center;
+            font-size: 100%;
+            font-size: 20px;
+        }
+
+
+        &--media{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            margin-left: 1%;
+            margin-right: 1%;
+
+            & a{
+                width: 50%;
+
+            }
+
+            & figcaption{
+                margin-bottom: 60px;
+
+                & .txt{
+                    & h3{
+                        font-size: 17px;
+                    }
+
+                    & p{
+                        font-size: 17px;
+                    }
+                }
+               
+            }
+
+        }
+    }
+
+    .bdp{
+        &--txt{
+            & h5{
+                font-size: 18px;
+            }
+
+            & nav{
+                & a{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+

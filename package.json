@@ -1,0 +1,11 @@
+{
+  "name": "p3_hertaut_code",
+  "version": "1.0.0",
+  "description": "test ",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./style.scss:./style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,275 @@
+#bloc_page {
+  max-width: 768px;
+  margin: auto;
+  border-right: 1px black solid;
+  border-left: 1px black solid;
+  font-family: "roboko", sans-serif;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 80%;
+}
+
+header a .ico {
+  font-size: 140%;
+  width: 20%;
+}
+
+header p {
+  width: 60%;
+}
+
+header p img {
+  width: 100%;
+}
+
+.main {
+  width: 100%;
+  margin: 0;
+  position: relative;
+}
+
+.main img {
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main--titre {
+  background: #f7f7f7;
+  position: absolute;
+  width: 100%;
+  margin-top: -60px;
+  padding-top: 15px;
+  border-radius: 30px 30px 0 0;
+}
+
+.main--titre--txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  padding-left: 15px;
+  padding-right: 30px;
+}
+
+.main--titre--txt h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 26px;
+  margin-bottom: 5px;
+}
+
+.main--titre--txt i {
+  font-size: 25px;
+}
+
+.menu {
+  background: #f7f7f7;
+  padding-top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu--txt {
+  width: 95%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.menu--txt h2 {
+  font-weight: initial;
+  font-size: 16px;
+  padding-bottom: 10px;
+  margin-left: 2%;
+}
+
+.menu--txt a {
+  text-decoration: none;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background: white;
+  border-radius: 15px;
+  padding: 13px;
+  margin-bottom: 15px;
+  -webkit-box-shadow: 0px 4px 5px 0px #c4c4c4;
+          box-shadow: 0px 4px 5px 0px #c4c4c4;
+}
+
+.menu--txt a .noms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu--txt a .noms h3 {
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+
+.menu--txt a .noms p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.menu--commande {
+  text-decoration: none;
+  color: black;
+  width: 40%;
+  margin: auto;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 11px;
+  padding-right: 11px;
+  border-radius: 25px;
+  font-size: 14px;
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-box-shadow: 0px 4px 5px 0px #c4c4c4;
+          box-shadow: 0px 4px 5px 0px #c4c4c4;
+  margin-bottom: 60px;
+  margin-top: 20px;
+  text-align: center;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.menu--commande:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.bdp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 15px;
+  background: #2d2d2d;
+  color: white;
+}
+
+.bdp--txt {
+  width: 90%;
+  margin: auto;
+}
+
+.bdp--txt h5 {
+  font-family: "Shrikhand", cursive;
+  font-size: 16px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.bdp--txt nav {
+  padding-bottom: 30px;
+}
+
+.bdp--txt nav a {
+  text-decoration: none;
+  color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.bdp--txt nav a:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.bdp--txt nav a i {
+  margin-right: 15px;
+}
+
+@media all and (min-width: 992px) {
+  #bloc_page {
+    min-width: 768px;
+    max-width: 1200px;
+  }
+  .menu--txt h2 {
+    text-align: center;
+  }
+  .menu--txt_dekstop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu--txt_dekstop a {
+    width: 28%;
+  }
+  .menu--commande {
+    width: 20%;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+  #bloc_page {
+    min-width: 768px;
+    max-width: 992px;
+  }
+  .menu--txt h2 {
+    text-align: center;
+  }
+  .menu--txt a {
+    width: 60%;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  .menu--commande {
+    width: 25%;
+  }
+}
+/*# sourceMappingURL=style1.css.map */

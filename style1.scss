@@ -1,0 +1,305 @@
+$color-primary:#9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$police-txt:'roboko', sans-serif;
+$police-logo:'Shrikhand', cursive;
+
+@mixin a-comportement{
+    text-decoration: none;
+    color:black;
+}
+
+@mixin lettre-dégradée{
+    background: linear-gradient($color-primary,$color-secondary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+
+#bloc_page{
+    max-width: 768px;
+    margin: auto;
+    border-right: 1px black solid;
+    border-left: 1px black solid;
+    font-family: $police-txt;
+    }
+
+header{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    & a{
+
+        & .ico{
+        font-size: 140%;
+        width: 20%;
+        
+    }
+    }
+    
+    & p{
+        width: 60%;
+        & img{ 
+            width:100%;
+           
+        }
+    }
+
+}
+
+.main{
+    width: 100%;
+    margin: 0;
+    position: relative;
+    
+    & img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        
+    
+        
+    }
+
+    &--titre{
+        background: #f7f7f7;
+        position: absolute;
+        width: 100%;
+        margin-top: -60px;
+        padding-top: 15px;
+        border-radius: 30px 30px 0 0;
+
+        &--txt{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding-left: 15px;
+            padding-right: 30px;
+            
+            
+
+            & h1{
+                font-family:$police-logo;
+                font-size: 26px;
+                margin-bottom: 5px;
+                
+            }
+
+            & i{
+                font-size: 25px;
+                
+            }
+        }
+
+    }
+
+}
+
+.menu{
+    background: #f7f7f7;
+    padding-top:45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    &--txt{
+        width: 95%;
+        margin: auto;
+        padding-bottom: 20px;
+        
+
+        & h2{
+            font-weight: initial;
+            font-size: 16px;
+            padding-bottom: 10px;
+            margin-left: 2%;
+            
+        }
+
+        & a{
+            @include a-comportement;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            background: white;
+            border-radius: 15px;
+            padding:13px;
+            margin-bottom: 15px;
+            box-shadow: 0px 4px 5px 0px #c4c4c4;
+
+            & .noms{
+                display: flex;
+                flex-direction: column;
+                
+
+                & h3{
+                    margin: 0;
+                    padding-bottom: 5px;
+                    font-size: 15px;
+                }
+
+                & p{
+                    margin: 0;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    &--commande {
+
+        @include a-comportement;
+        width: 40%;
+        margin: auto;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        padding-left: 11px;
+        padding-right: 11px;
+        border-radius: 25px;
+        font-size: 14px;
+        color: white;
+        background: linear-gradient($color-secondary,$color-primary);
+        box-shadow: 0px 4px 5px 0px #c4c4c4;
+        margin-bottom: 60px;
+        margin-top: 20px;
+        text-align: center;
+        transition: all 500ms;
+        
+        
+        &:hover{
+            background: linear-gradient($color-primary,$color-secondary);
+            transform: scale(1.05);
+        }
+    
+
+
+        
+        
+    }
+
+    }
+
+.bdp{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    background: #2d2d2d;
+    color: white;
+    &--txt{
+        width: 90%;
+        margin: auto;
+        & h5{
+            font-family: $police-logo;
+            font-size: 16px;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            
+        }
+        & nav{
+            padding-bottom: 30px;
+            & a{
+                @include a-comportement;
+                color: white;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                margin-bottom: 8px;
+
+                &:hover{
+                    @include lettre-dégradée;
+                }
+
+                & i{
+                    margin-right: 15px;
+                }
+            }
+            
+            
+                
+        }
+    }
+}
+
+@media all and (min-width:992px) {
+
+    #bloc_page{
+        min-width: 768px;
+        max-width: 1200px;
+    }
+
+    .menu{
+
+        &--txt{
+
+            & h2{
+                text-align: center;
+            }
+
+            &_dekstop{
+
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                & a{
+                    width: 28%;
+                }
+            }
+        }
+
+        &--commande{
+            width: 20%;
+        }
+    }
+
+}
+
+
+@media all and (min-width:768px) and (max-width:992px) {
+
+    #bloc_page{
+        min-width: 768px;
+        max-width: 992px;
+    }
+
+    .menu{
+        
+        &--txt{
+            & h2{
+                text-align: center;
+            }
+
+            & a{
+                width: 60%;
+                margin: auto;
+                margin-bottom: 15px;
+            }
+        }
+
+        &--commande{
+            width: 25%;
+        }
+    }
+
+
+}
+
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
+            
+        
+       

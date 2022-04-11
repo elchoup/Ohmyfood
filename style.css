@@ -8,10 +8,12 @@
 
 header {
   text-align: center;
+  font-family: "Shrikhand", cursive;
 }
 
-header img {
-  width: 45%;
+header h1 {
+  font-size: 40px;
+  margin: 10px;
 }
 
 .loc {
@@ -57,9 +59,9 @@ header img {
   text-align: center;
 }
 
-.explore h1 {
+.explore h2 {
   margin: 0;
-  font-size: 22px;
+  font-size: 25px;
   padding-top: 30px;
 }
 
@@ -355,6 +357,9 @@ header img {
   #bloc_page {
     min-width: 768px;
     max-width: 1200px;
+  }
+  header h1 {
+    font-size: 60px;
   }
   .loc h5 {
     font-size: 17px;

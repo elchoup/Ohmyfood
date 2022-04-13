@@ -62,6 +62,7 @@ header h1 {
           align-items: baseline;
   padding-left: 15px;
   padding-right: 30px;
+  position: relative;
 }
 
 .main--titre--txt h1 {
@@ -72,6 +73,32 @@ header h1 {
 
 .main--titre--txt i {
   font-size: 25px;
+}
+
+.main--titre--txt p {
+  position: absolute;
+  margin: 0;
+  right: 30px;
+  top: 26.5px;
+}
+
+.main--titre--txt p i {
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transform-origin: 50% bottom;
+          transform-origin: 50% bottom;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.main--titre--txt p:hover i {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .menu {
@@ -117,39 +144,92 @@ header h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  padding: 13px;
   background: white;
   border-radius: 15px;
   -webkit-box-shadow: 0px 4px 5px 0px #c4c4c4;
           box-shadow: 0px 4px 5px 0px #c4c4c4;
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+.menu--txt .fiche--titre {
+  padding: 13px;
+  width: 100%;
+}
+
+.menu--txt .fiche--titre h3 {
+  margin: 0;
+  padding-bottom: 6px;
+  font-size: 16px;
 }
 
 .menu--txt .fiche--desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.menu--txt .fiche--desc h3 {
-  margin: 0;
-  padding-bottom: 6px;
-  font-size: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu--txt .fiche--desc p {
   margin: 0;
-  font-size: 14px;
+  display: inline-block;
+  font-size: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu--txt .fiche--desc strong {
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  width: 15%;
+  text-align: center;
+}
+
+.menu--txt .fiche--check {
+  background: #99E2D0;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  width: 20%;
+  height: 100%;
+  right: 0;
+  position: absolute;
+  -webkit-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.menu--txt .fiche--check i {
+  margin: auto;
+  color: white;
+  font-size: 20px;
+  -webkit-transition: all 500ms 200ms ease-in-out;
+  transition: all 500ms 200ms ease-in-out;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  display: block;
+}
+
+.menu--txt .fiche:hover .fiche--check {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu--txt .fiche:hover strong {
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+
+.menu--txt .fiche:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 .menu--commande {
@@ -256,13 +336,17 @@ header h1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .menu--txt_dekstop a {
+  .menu--txt_dekstop .fiche {
     width: 28%;
   }
   .menu--commande {
@@ -284,10 +368,16 @@ header h1 {
   .menu--txt h2 {
     text-align: center;
   }
-  .menu--txt a {
+  .menu--txt .fiche {
     width: 60%;
     margin: auto;
     margin-bottom: 15px;
+  }
+  .menu--txt .fiche strong {
+    width: 10%;
+  }
+  .menu--txt .fiche--check {
+    width: 15%;
   }
   .menu--commande {
     width: 25%;

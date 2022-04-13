@@ -17,6 +17,8 @@ $police-logo:'Shrikhand', cursive;
 }
 
 
+
+
 #bloc_page{
     max-width: 768px;
     margin: auto;
@@ -82,6 +84,7 @@ header{
             align-items: baseline;
             padding-left: 15px;
             padding-right: 30px;
+            position: relative;
             
             
 
@@ -94,8 +97,38 @@ header{
 
             & i{
                 font-size: 25px;
-                
+
+               
             }
+
+            & p{
+                position: absolute;
+                margin: 0;
+                right: 30px;
+                top:26.5px;
+                
+                & i{
+                    transition: all 500ms ease-in-out;
+                    transform-origin: 50% bottom;
+                    transform: scale(0);
+                    @include lettre-dégradée;
+                    
+                }
+
+                &:hover{
+                    & i{
+                        transform: scale(1);
+                    }
+                }
+            }
+
+               
+                
+
+                
+
+                
+            
         }
 
     }
@@ -132,31 +165,102 @@ header{
         }
         & .fiche{
             display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            padding: 13px;
             background: white;
             border-radius: 15px;
             box-shadow: 0px 4px 5px 0px #c4c4c4;
             cursor:pointer;
-        
+            overflow: hidden;
+            position: relative;
 
-            &--desc{
-                display: flex;
-                flex-direction: column;
-                
+            &--titre{
+                padding: 13px;
+                width: 100%;
 
                 & h3{
                     margin: 0;
                     padding-bottom: 6px;
-                    font-size: 15px;
-                }
-
-                & p{
-                    margin: 0;
-                    font-size: 14px;
+                    font-size: 16px;
+                
                 }
             }
+        
+
+            &--desc{
+                display: flex;
+                justify-content: space-between;
+                
+               
+                
+                & p{
+                    margin: 0;
+                    display: inline-block;
+                    font-size: 16px;
+                    overflow: hidden;
+                    white-space:nowrap;
+                    text-overflow: ellipsis; 
+                    
+                    
+                }
+                
+                
+
+                & strong{
+                    transition: all 500ms ease-in-out;
+                    width: 15%;
+                    text-align: center;
+                    
+                    
+                }
+            
+            }
+
+            &--check{
+                background: $color-tertiary;
+                height: auto;
+                display: flex;
+                margin: 0;
+                width: 20%;
+                height: 100%;
+                right: 0;
+                position: absolute;
+                transition: all 500ms ease-in-out;
+                transform: translateX(100%);
+                
+                
+                
+
+                & i{
+                    margin: auto;
+                    color: white;
+                    font-size: 20px;
+                    transition: all 500ms 200ms ease-in-out;
+                    transform: rotate(0deg);
+                    display: block;
+
+                }
+
+               
+                
+                
+            }
+
+            &:hover{
+                & .fiche--check{
+                    transform: translateX(0);
+                    
+                }
+
+
+                & strong{
+                    transform: translateX(-150%);
+                
+                }
+
+                & i{
+                    transform: rotate(360deg);
+                }
+            }
+
 
         }
     }
@@ -269,10 +373,11 @@ header{
             &_dekstop{
 
                 display: flex;
+                flex-direction: row;
                 justify-content: space-between;
                 flex-wrap: wrap;
 
-                & a{
+                & .fiche{
                     width: 28%;
                 }
             }
@@ -313,12 +418,22 @@ header{
             & h2{
                 text-align: center;
             }
-
-            & a{
+            
+            & .fiche{
                 width: 60%;
                 margin: auto;
                 margin-bottom: 15px;
+
+                & strong{
+                    width:10%;
+                }
+
+                &--check{
+                    width: 15%;
+                }
             }
+            
+            
         }
 
         &--commande{

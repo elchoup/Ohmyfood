@@ -1,9 +1,174 @@
+@-webkit-keyframes color-neon {
+  0% {
+    color: #FF79DA;
+    text-shadow: 0 0 5px #FF79DA;
+  }
+  80% {
+    color: #9356DC;
+    text-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: 0 0 5px #FF79DA;
+  }
+}
+
+@keyframes color-neon {
+  0% {
+    color: #FF79DA;
+    text-shadow: 0 0 5px #FF79DA;
+  }
+  80% {
+    color: #9356DC;
+    text-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: 0 0 5px #FF79DA;
+  }
+}
+
+@-webkit-keyframes fin-progress {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  99% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fin-progress {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  99% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes debut-main {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10000px);
+            transform: translateY(-10000px);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes debut-main {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10000px);
+            transform: translateY(-10000px);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress_bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  background-size: cover;
+  color: #9356DC;
+  font-family: "Shrikhand", cursive;
+  opacity: 0;
+  -webkit-transform: translateY(-10000px);
+          transform: translateY(-10000px);
+  -webkit-animation: fin-progress 3s ease-out;
+          animation: fin-progress 3s ease-out;
+}
+
+.progress_bar .lettre {
+  font-size: 50px;
+  letter-spacing: 4px;
+  -webkit-animation: color-neon 1.5s linear infinite;
+          animation: color-neon 1.5s linear infinite;
+}
+
+.progress_bar .lettre:nth-child(1) {
+  -webkit-animation-delay: 0.1;
+          animation-delay: 0.1;
+}
+
+.progress_bar .lettre:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.progress_bar .lettre:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.progress_bar .lettre:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.progress_bar .lettre:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.progress_bar .lettre:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.progress_bar .lettre:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.progress_bar .lettre:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
 #bloc_page {
   max-width: 768px;
   margin: auto;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
   border-right: 1px black solid;
   border-left: 1px black solid;
   font-family: "roboko", sans-serif;
+  -webkit-animation: debut-main 3s ease-in;
+          animation: debut-main 3s ease-in;
 }
 
 header {

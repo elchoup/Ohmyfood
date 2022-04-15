@@ -1,9 +1,196 @@
+@-webkit-keyframes color-neon {
+  0% {
+    color: #FF79DA;
+    text-shadow: 0 0 5px #FF79DA;
+  }
+  80% {
+    color: #9356DC;
+    text-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: 0 0 5px #FF79DA;
+  }
+}
+
+@keyframes color-neon {
+  0% {
+    color: #FF79DA;
+    text-shadow: 0 0 5px #FF79DA;
+  }
+  80% {
+    color: #9356DC;
+    text-shadow: none;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: 0 0 5px #FF79DA;
+  }
+}
+
+@-webkit-keyframes fin-progress {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  99% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fin-progress {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  99% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes debut-main {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10000px);
+            transform: translateY(-10000px);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes debut-main {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-10000px);
+            transform: translateY(-10000px);
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fiche-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fiche-up {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress_bar {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: white;
+  background-size: cover;
+  color: #9356DC;
+  font-family: "Shrikhand", cursive;
+  opacity: 0;
+  -webkit-transform: translateY(-10000px);
+          transform: translateY(-10000px);
+  -webkit-animation: fin-progress 3s ease-out;
+          animation: fin-progress 3s ease-out;
+}
+
+.progress_bar .lettre {
+  font-size: 50px;
+  letter-spacing: 4px;
+  -webkit-animation: color-neon 1.5s linear infinite;
+          animation: color-neon 1.5s linear infinite;
+}
+
+.progress_bar .lettre:nth-child(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.progress_bar .lettre:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.progress_bar .lettre:nth-child(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.progress_bar .lettre:nth-child(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.progress_bar .lettre:nth-child(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+.progress_bar .lettre:nth-child(6) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+.progress_bar .lettre:nth-child(7) {
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+}
+
+.progress_bar .lettre:nth-child(8) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+
 #bloc_page {
   max-width: 768px;
   margin: auto;
   border-right: 1px black solid;
   border-left: 1px black solid;
   font-family: "roboko", sans-serif;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-animation: debut-main 3s ease-in;
+          animation: debut-main 3s ease-in;
 }
 
 header {
@@ -140,7 +327,7 @@ header h1 {
   row-gap: 15px;
 }
 
-.menu--txt .fiche {
+.menu--txt_dekstop .fiche {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -151,20 +338,43 @@ header h1 {
   cursor: pointer;
   overflow: hidden;
   position: relative;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
-.menu--txt .fiche--titre {
+.menu--txt_dekstop .fiche:nth-child(1) {
+  -webkit-animation: fiche-up 1s ease-in-out;
+          animation: fiche-up 1s ease-in-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.menu--txt_dekstop .fiche:nth-child(2) {
+  -webkit-animation: fiche-up 1.3s ease-in-out;
+          animation: fiche-up 1.3s ease-in-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.menu--txt_dekstop .fiche:nth-child(3) {
+  -webkit-animation: fiche-up 1.6s ease-in-out;
+          animation: fiche-up 1.6s ease-in-out;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+}
+
+.menu--txt_dekstop .fiche--titre {
   padding: 13px;
   width: 100%;
 }
 
-.menu--txt .fiche--titre h3 {
+.menu--txt_dekstop .fiche--titre h3 {
   margin: 0;
   padding-bottom: 6px;
   font-size: 16px;
 }
 
-.menu--txt .fiche--desc {
+.menu--txt_dekstop .fiche--desc {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -173,7 +383,7 @@ header h1 {
           justify-content: space-between;
 }
 
-.menu--txt .fiche--desc p {
+.menu--txt_dekstop .fiche--desc p {
   margin: 0;
   display: inline-block;
   font-size: 16px;
@@ -182,14 +392,14 @@ header h1 {
   text-overflow: ellipsis;
 }
 
-.menu--txt .fiche--desc strong {
+.menu--txt_dekstop .fiche--desc strong {
   -webkit-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
   width: 15%;
   text-align: center;
 }
 
-.menu--txt .fiche--check {
+.menu--txt_dekstop .fiche--check {
   background: #99E2D0;
   height: auto;
   display: -webkit-box;
@@ -206,7 +416,7 @@ header h1 {
           transform: translateX(100%);
 }
 
-.menu--txt .fiche--check i {
+.menu--txt_dekstop .fiche--check i {
   margin: auto;
   color: white;
   font-size: 20px;
@@ -217,17 +427,17 @@ header h1 {
   display: block;
 }
 
-.menu--txt .fiche:hover .fiche--check {
+.menu--txt_dekstop .fiche:hover .fiche--check {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
-.menu--txt .fiche:hover strong {
+.menu--txt_dekstop .fiche:hover strong {
   -webkit-transform: translateX(-150%);
           transform: translateX(-150%);
 }
 
-.menu--txt .fiche:hover i {
+.menu--txt_dekstop .fiche:hover i {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }

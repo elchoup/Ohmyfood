@@ -1,93 +1,3 @@
-@-webkit-keyframes color-neon {
-  0% {
-    color: #FF79DA;
-    text-shadow: 0 0 5px #FF79DA;
-  }
-  80% {
-    color: #9356DC;
-    text-shadow: none;
-  }
-  100% {
-    color: #FF79DA;
-    text-shadow: 0 0 5px #FF79DA;
-  }
-}
-
-@keyframes color-neon {
-  0% {
-    color: #FF79DA;
-    text-shadow: 0 0 5px #FF79DA;
-  }
-  80% {
-    color: #9356DC;
-    text-shadow: none;
-  }
-  100% {
-    color: #FF79DA;
-    text-shadow: 0 0 5px #FF79DA;
-  }
-}
-
-@-webkit-keyframes fin-progress {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  99% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes fin-progress {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  99% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes debut-main {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-10000px);
-            transform: translateY(-10000px);
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes debut-main {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-10000px);
-            transform: translateY(-10000px);
-  }
-  99% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @-webkit-keyframes fiche-up {
   0% {
     opacity: 0;
@@ -110,87 +20,12 @@
   }
 }
 
-.progress_bar {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: white;
-  background-size: cover;
-  color: #9356DC;
-  font-family: "Shrikhand", cursive;
-  opacity: 0;
-  -webkit-transform: translateY(-10000px);
-          transform: translateY(-10000px);
-  -webkit-animation: fin-progress 3s ease-out;
-          animation: fin-progress 3s ease-out;
-}
-
-.progress_bar .lettre {
-  font-size: 50px;
-  letter-spacing: 4px;
-  -webkit-animation: color-neon 1.5s linear infinite;
-          animation: color-neon 1.5s linear infinite;
-}
-
-.progress_bar .lettre:nth-child(1) {
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
-}
-
-.progress_bar .lettre:nth-child(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-
-.progress_bar .lettre:nth-child(3) {
-  -webkit-animation-delay: 0.3s;
-          animation-delay: 0.3s;
-}
-
-.progress_bar .lettre:nth-child(4) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-
-.progress_bar .lettre:nth-child(5) {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-}
-
-.progress_bar .lettre:nth-child(6) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-
-.progress_bar .lettre:nth-child(7) {
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-}
-
-.progress_bar .lettre:nth-child(8) {
-  -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-}
-
 #bloc_page {
   max-width: 768px;
   margin: auto;
   border-right: 1px black solid;
   border-left: 1px black solid;
   font-family: "roboko", sans-serif;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-  -webkit-animation: debut-main 3s ease-in;
-          animation: debut-main 3s ease-in;
 }
 
 header {
@@ -312,8 +147,17 @@ header h1 {
 .menu--txt h2 {
   font-weight: initial;
   font-size: 16px;
-  padding-bottom: 10px;
+  margin: 0;
+  padding-top: 15px;
   margin-left: 2%;
+}
+
+.menu--txt hr {
+  margin-left: 2%;
+  width: 45px;
+  background: #99E2D0;
+  height: 2px;
+  border: none;
 }
 
 .menu--txt_dekstop {
@@ -325,6 +169,7 @@ header h1 {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 15px;
+  padding-top: 10px;
 }
 
 .menu--txt_dekstop .fiche {
@@ -343,98 +188,97 @@ header h1 {
 }
 
 .menu--txt_dekstop .fiche:nth-child(1) {
-  -webkit-animation: fiche-up 1s ease-in-out;
-          animation: fiche-up 1s ease-in-out;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation: fiche-up 1.3s ease-in-out;
+          animation: fiche-up 1.3s ease-in-out;
 }
 
 .menu--txt_dekstop .fiche:nth-child(2) {
-  -webkit-animation: fiche-up 1.3s ease-in-out;
-          animation: fiche-up 1.3s ease-in-out;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation: fiche-up 1.6s ease-in-out;
+          animation: fiche-up 1.6s ease-in-out;
 }
 
 .menu--txt_dekstop .fiche:nth-child(3) {
-  -webkit-animation: fiche-up 1.6s ease-in-out;
-          animation: fiche-up 1.6s ease-in-out;
-  -webkit-animation-delay: 3s;
-          animation-delay: 3s;
+  -webkit-animation: fiche-up 1.9s ease-in-out;
+          animation: fiche-up 1.9s ease-in-out;
 }
 
 .menu--txt_dekstop .fiche--titre {
   padding: 13px;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 80%;
 }
 
 .menu--txt_dekstop .fiche--titre h3 {
   margin: 0;
   padding-bottom: 6px;
   font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-.menu--txt_dekstop .fiche--desc {
+.menu--txt_dekstop .fiche--titre p {
+  margin: 0;
+  font-size: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu--txt_dekstop .fiche--prix {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 20%;
+  padding-bottom: 13px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
-.menu--txt_dekstop .fiche--desc p {
-  margin: 0;
-  display: inline-block;
-  font-size: 16px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.menu--txt_dekstop .fiche--desc strong {
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  width: 15%;
-  text-align: center;
+.menu--txt_dekstop .fiche--prix span {
+  font-size: 17px;
+  font-weight: bold;
 }
 
 .menu--txt_dekstop .fiche--check {
   background: #99E2D0;
-  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0;
-  width: 20%;
+  width: 0;
   height: 100%;
-  right: 0;
-  position: absolute;
-  -webkit-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
 }
 
 .menu--txt_dekstop .fiche--check i {
   margin: auto;
+  padding: 25px;
   color: white;
   font-size: 20px;
-  -webkit-transition: all 500ms 200ms ease-in-out;
-  transition: all 500ms 200ms ease-in-out;
+  -webkit-transition: all 0.6s 0.2s;
+  transition: all 0.6s 0.2s;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   display: block;
 }
 
 .menu--txt_dekstop .fiche:hover .fiche--check {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-}
-
-.menu--txt_dekstop .fiche:hover strong {
-  -webkit-transform: translateX(-150%);
-          transform: translateX(-150%);
+  width: 30%;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
 }
 
 .menu--txt_dekstop .fiche:hover i {
@@ -540,7 +384,10 @@ header h1 {
     font-size: 60px;
   }
   .menu--txt h2 {
-    text-align: center;
+    margin-left: 46%;
+  }
+  .menu--txt hr {
+    margin-left: 46%;
   }
   .menu--txt_dekstop {
     display: -webkit-box;
@@ -576,18 +423,15 @@ header h1 {
     font-size: 60px;
   }
   .menu--txt h2 {
-    text-align: center;
+    margin-left: 22%;
+  }
+  .menu--txt hr {
+    margin-left: 22%;
   }
   .menu--txt .fiche {
     width: 60%;
     margin: auto;
     margin-bottom: 15px;
-  }
-  .menu--txt .fiche strong {
-    width: 10%;
-  }
-  .menu--txt .fiche--check {
-    width: 15%;
   }
   .menu--commande {
     width: 25%;

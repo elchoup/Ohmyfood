@@ -2,14 +2,20 @@
   0% {
     color: #FF79DA;
     text-shadow: 0 0 5px #FF79DA;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
   80% {
     color: #9356DC;
     text-shadow: none;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
   }
   100% {
     color: #FF79DA;
     text-shadow: 0 0 5px #FF79DA;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
   }
 }
 
@@ -17,27 +23,33 @@
   0% {
     color: #FF79DA;
     text-shadow: 0 0 5px #FF79DA;
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
   80% {
     color: #9356DC;
     text-shadow: none;
+    -webkit-transform: translateY(-3px);
+            transform: translateY(-3px);
   }
   100% {
     color: #FF79DA;
     text-shadow: 0 0 5px #FF79DA;
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
   }
 }
 
 @-webkit-keyframes fin-progress {
   0% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   99% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
     opacity: 0;
@@ -47,13 +59,13 @@
 @keyframes fin-progress {
   0% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   99% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
   100% {
     opacity: 0;
@@ -88,6 +100,42 @@
   }
 }
 
+@-webkit-keyframes clignote {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes clignote {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 .progress_bar {
   position: absolute;
   width: 100%;
@@ -106,22 +154,22 @@
   color: #9356DC;
   font-family: "Shrikhand", cursive;
   opacity: 0;
-  -webkit-transform: translateY(-10000px);
-          transform: translateY(-10000px);
-  -webkit-animation: fin-progress 3s ease-out;
-          animation: fin-progress 3s ease-out;
+  -webkit-transform: translateX(-10000px);
+          transform: translateX(-10000px);
+  -webkit-animation: fin-progress 3s ease-in-out;
+          animation: fin-progress 3s ease-in-out;
 }
 
 .progress_bar .lettre {
   font-size: 50px;
   letter-spacing: 4px;
-  -webkit-animation: color-neon 1.5s linear infinite;
-          animation: color-neon 1.5s linear infinite;
+  -webkit-animation: color-neon 1s linear infinite;
+          animation: color-neon 1s linear infinite;
 }
 
 .progress_bar .lettre:nth-child(1) {
-  -webkit-animation-delay: 0.1;
-          animation-delay: 0.1;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .progress_bar .lettre:nth-child(2) {
@@ -411,6 +459,8 @@ header h1 {
   padding-left: 15px;
   padding-right: 15px;
   right: 15px;
+  -webkit-animation: clignote 4s ease-out infinite;
+          animation: clignote 4s ease-out infinite;
 }
 
 .presentation--fig figcaption {

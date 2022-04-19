@@ -1,199 +1,88 @@
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
-$police-txt:'roboko', sans-serif;
-$police-logo:'Shrikhand', cursive;
+$police-txt:'roboko',
+sans-serif;
+$police-logo:'Shrikhand',
+cursive;
 
-@mixin a-comportement{
+@mixin a-comportement {
     text-decoration: none;
-    color:black;
+    color: black;
 }
 
-@mixin lettre-dégradée{
-    background: linear-gradient($color-primary,$color-secondary);
+@mixin lettre-dégradée {
+    background: linear-gradient($color-primary, $color-secondary);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-
-
-@keyframes color-neon{
-    0%{
-        color: $color-secondary;
-        text-shadow: 0 0 5px $color-secondary;
-    }
-
-    80%{
-        color: $color-primary;
-        text-shadow: none;
-    }
-
-    100%{
-        color:$color-secondary;
-        text-shadow: 0 0 5px $color-secondary;
-
-    }
-}
-
-@keyframes fin-progress{
-    0%{
-        opacity: 1;
-        transform: translateY(0);
-        
-    }
-
-    99%{
-        opacity: 1;
-        transform: translateY(0);
-        
-    }
-
-    100%{
-        opacity: 0;
-        
-        
-    }
-}
-
-@keyframes debut-main{
-    0%{
-        opacity: 0;
-        transform: translateY(-10000px);
-        
-    }
-
-    99%{
-        opacity: 0;
-        
-    }
-
-    100%{
-        opacity: 1;
-    }
-}
-
-@keyframes fiche-up{
-    0%{
+@keyframes fiche-up {
+    0% {
         opacity: 0;
         transform: translateY(20px);
     }
 
-    100%{
+    100% {
         opacity: 1;
 
     }
 }
 
 
-.progress_bar{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    background-size: cover;
-    color: $color-primary;
-    font-family: $police-logo;
-    opacity:0;
-    transform: translateY(-10000px);
-    animation: fin-progress 3s ease-out;
-
-    & .lettre{
-        font-size: 50px;
-        letter-spacing: 4px;
-        animation: color-neon 1.5s linear infinite;
-        &:nth-child(1){
-            animation-delay: 0.1s;
-        }
-        &:nth-child(2){
-            animation-delay: 0.2s;
-        }
-        &:nth-child(3){
-            animation-delay: 0.3s;
-        }
-        &:nth-child(4){
-            animation-delay: 0.4s;
-        }
-        &:nth-child(5){
-            animation-delay: 0.5s;
-        }
-        &:nth-child(6){
-            animation-delay: 0.6s;
-        }
-        &:nth-child(7){
-            animation-delay: 0.7s;
-        }
-        &:nth-child(8){
-            animation-delay: 0.8s;
-        }
-
-        
-    }
-    
-    
-}
-
-
-
-
-
-#bloc_page{
+#bloc_page {
     max-width: 768px;
     margin: auto;
     border-right: 1px black solid;
     border-left: 1px black solid;
     font-family: $police-txt;
-    transform: translateY(0);
-    animation: debut-main 3s ease-in;
+}
+
+header {
+    display: flex;
+    width: 90%;
+    margin: auto;
+
+    & a {
+
+        & .ico {
+            font-size: 20px;
+            width: 20%;
+            color: initial;
+
+
+        }
     }
 
-header{
-    display:flex;
-    width:90%;
-    margin:auto;
-    
-    & a{
-
-        & .ico{
-        font-size: 20px;
-        width: 20%;
-        color: initial;
-       
-        
-    }
-    }
-    
-    & h1{
+    & h1 {
         text-align: center;
         font-family: $police-logo;
         font-size: 40px;
         margin: 0;
         width: 100%;
-        
+
 
     }
-    
+
 
 }
 
-.main{
+.main {
     width: 100%;
     margin: 0;
     position: relative;
-    
-    & img{
+
+    & img {
         width: 100%;
         height: 300px;
         object-fit: cover;
-        
-    
-        
+
+
+
     }
 
-    &--titre{
+    &--titre {
         background: #f7f7f7;
         position: absolute;
         width: 100%;
@@ -201,205 +90,226 @@ header{
         padding-top: 15px;
         border-radius: 30px 30px 0 0;
 
-        &--txt{
+        &--txt {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             padding-left: 15px;
             padding-right: 30px;
             position: relative;
-            
-            
 
-            & h1{
-                font-family:$police-logo;
+
+
+            & h1 {
+                font-family: $police-logo;
                 font-size: 26px;
                 margin-bottom: 5px;
-                
+
             }
 
-            & i{
+            & i {
                 font-size: 25px;
 
-               
+
             }
 
-            & p{
+            & p {
                 position: absolute;
                 margin: 0;
                 right: 30px;
-                top:26.5px;
-                
-                & i{
+                top: 26.5px;
+
+                & i {
                     transition: all 500ms ease-in-out;
                     transform-origin: 50% bottom;
                     transform: scale(0);
                     @include lettre-dégradée;
-                    
+
                 }
 
-                &:hover{
-                    & i{
+                &:hover {
+                    & i {
                         transform: scale(1);
                     }
                 }
             }
 
-               
-                
 
-                
 
-                
-            
+
+
+
+
+
         }
 
     }
 
 }
 
-.menu{
+.menu {
     background: #f7f7f7;
-    padding-top:45px;
+    padding-top: 45px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    
 
-    &--txt{
+
+
+    &--txt {
         width: 95%;
         margin: auto;
         padding-bottom: 20px;
-        
 
-        & h2{
+
+
+        & h2 {
             font-weight: initial;
             font-size: 16px;
-            padding-bottom: 10px;
+            margin: 0;
+            padding-top: 15px;
             margin-left: 2%;
-            
         }
 
-        &_dekstop{
+        & hr {
+            margin-left: 2%;
+            width: 45px;
+            background: $color-tertiary;
+            height: 2px;
+            border: none;
+
+        }
+
+
+
+
+
+        &_dekstop {
             display: flex;
             flex-direction: column;
             row-gap: 15px;
-            
-            
-        
-            & .fiche{
+            padding-top: 10px;
+
+
+
+            & .fiche {
                 display: flex;
                 background: white;
                 border-radius: 15px;
                 box-shadow: 0px 4px 5px 0px #c4c4c4;
-                cursor:pointer;
+                cursor: pointer;
                 overflow: hidden;
                 position: relative;
                 transform: translateY(0);
-                
 
-                &:nth-child(1){
-                    animation: fiche-up 1s ease-in-out;
-                    animation-delay: 3s;
-                }
-                &:nth-child(2){
+
+
+                &:nth-child(1) {
                     animation: fiche-up 1.3s ease-in-out;
-                    animation-delay: 3s;
                 }
-                &:nth-child(3){
+
+                &:nth-child(2) {
                     animation: fiche-up 1.6s ease-in-out;
-                    animation-delay: 3s;
                 }
-                
 
-                &--titre{
+                &:nth-child(3) {
+                    animation: fiche-up 1.9s ease-in-out;
+                }
+
+
+                &--titre {
                     padding: 13px;
-                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: 80%;
 
-                    & h3{
+
+                    & h3 {
                         margin: 0;
                         padding-bottom: 6px;
                         font-size: 16px;
-                    
-                    }
-                }
-
-            
-
-                &--desc{
-                    display: flex;
-                    justify-content: space-between;
-                    
-                
-                    
-                    & p{
-                        margin: 0;
-                        display: inline-block;
-                        font-size: 16px;
+                        text-overflow: ellipsis;
                         overflow: hidden;
-                        white-space:nowrap;
-                        text-overflow: ellipsis; 
-                        
-                        
-                    }
-                    
-                    
+                        white-space: nowrap;
 
-                    & strong{
-                        transition: all 500ms ease-in-out;
-                        width: 15%;
-                        text-align: center;
-                        
-                        
                     }
-                
+
+                    & p {
+                        margin: 0;
+                        font-size: 16px;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+
+
+
+
                 }
 
-                &--check{
+
+
+                &--prix {
+                    display: flex;
+                    width: 20%;
+                    padding-bottom: 13px;
+                    justify-content: center;
+                    align-items: flex-end;
+
+
+                    & span {
+                        font-size: 17px;
+                        font-weight: bold;
+
+
+
+
+
+                    }
+
+                }
+
+                &--check {
                     background: $color-tertiary;
-                    height: auto;
                     display: flex;
                     margin: 0;
-                    width: 20%;
+                    width: 0;
                     height: 100%;
-                    right: 0;
-                    position: absolute;
-                    transition: all 500ms ease-in-out;
-                    transform: translateX(100%);
-                    
-                    
-                    
 
-                    & i{
+
+
+
+
+
+                    & i {
                         margin: auto;
+                        padding: 25px;
                         color: white;
                         font-size: 20px;
-                        transition: all 500ms 200ms ease-in-out;
+                        transition: all 0.6s 0.2s;
                         transform: rotate(0deg);
                         display: block;
 
                     }
 
-                
-                    
-                    
+
+
+
                 }
 
-                &:hover{
+                &:hover {
 
-                    & .fiche--check{
-                        transform: translateX(0);
-                        
+                    & .fiche--check {
+                        width: 30%;
+                        transition: 1.2s;
+
                     }
 
 
-                    & strong{
-                        transform: translateX(-150%);
-                    
-                    }
-
-                    & i{
+                    & i {
                         transform: rotate(360deg);
                     }
                 }
@@ -421,48 +331,52 @@ header{
         border-radius: 25px;
         font-size: 14px;
         color: white;
-        background: linear-gradient($color-secondary,$color-primary);
+        background: linear-gradient($color-secondary, $color-primary);
         box-shadow: 0px 4px 5px 0px #c4c4c4;
         margin-bottom: 60px;
         margin-top: 20px;
         text-align: center;
         transition: all 500ms;
-        
-        
-        &:hover{
-            background: linear-gradient($color-primary,$color-secondary);
+
+
+        &:hover {
+            background: linear-gradient($color-primary, $color-secondary);
             transform: scale(1.05);
         }
-    
 
 
-        
-        
-    }
+
+
 
     }
 
+}
 
-.bdp{
+
+.bdp {
     display: flex;
     flex-direction: column;
     padding-top: 15px;
     background: #2d2d2d;
     color: white;
-    &--txt{
+
+    &--txt {
         width: 90%;
         margin: auto;
-        & h5{
+
+        & h5 {
             font-family: $police-logo;
             font-size: 16px;
             margin: 0;
             padding-top: 10px;
             padding-bottom: 20px;
-            
+
         }
-        & nav{
+
+        & nav {
             padding-bottom: 30px;
-            & a{
+
+            & a {
                 @include a-comportement;
                 color: white;
                 display: flex;
@@ -470,65 +384,70 @@ header{
                 font-size: 14px;
                 margin-bottom: 8px;
 
-                &:hover{
+                &:hover {
                     @include lettre-dégradée;
                 }
 
-                & i{
+                & i {
                     margin-right: 15px;
                 }
             }
-            
-            
-                
+
+
+
         }
     }
 }
 
 @media all and (min-width:992px) {
 
-    #bloc_page{
+    #bloc_page {
         min-width: 768px;
         max-width: 1200px;
     }
 
-    header{
-        & a{
-            & .ico{
+    header {
+        & a {
+            & .ico {
                 font-size: 30px;
             }
         }
 
-        & h1{
+        & h1 {
             font-size: 60px;
         }
 
-        
+
     }
 
 
-    .menu{
+    .menu {
 
-        &--txt{
+        &--txt {
 
-            & h2{
-                text-align: center;
+            & h2 {
+                margin-left: 46%;
             }
 
-            &_dekstop{
+            & hr {
+                margin-left: 46%;
+            }
+
+            &_dekstop {
 
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
                 flex-wrap: wrap;
 
-                & .fiche{
+                & .fiche {
                     width: 28%;
+
                 }
             }
         }
 
-        &--commande{
+        &--commande {
             width: 20%;
         }
     }
@@ -538,70 +457,51 @@ header{
 
 @media all and (min-width:768px) and (max-width:992px) {
 
-    #bloc_page{
+    #bloc_page {
         min-width: 768px;
         max-width: 992px;
     }
 
-    header{
-        & a{
-            & .ico{
+    header {
+        & a {
+            & .ico {
                 font-size: 30px;
             }
         }
 
-        & h1{
+        & h1 {
             font-size: 60px;
         }
 
-        
+
     }
 
-    .menu{
-        
-        &--txt{
-            & h2{
-                text-align: center;
+    .menu {
+
+        &--txt {
+
+            & h2 {
+                margin-left: 22%;
             }
-            
-            & .fiche{
+
+            & hr {
+                margin-left: 22%;
+            }
+
+            & .fiche {
                 width: 60%;
                 margin: auto;
                 margin-bottom: 15px;
 
-                & strong{
-                    width:10%;
-                }
-
-                &--check{
-                    width: 15%;
-                }
             }
-            
-            
+
+
         }
 
-        &--commande{
+        &--commande {
             width: 25%;
         }
     }
 
 
 }
-
-    
-    
-    
-    
-
-
-
-
-
-
-
-
-
-            
-        
-       

@@ -23,8 +23,6 @@
 #bloc_page {
   max-width: 768px;
   margin: auto;
-  border-right: 1px black solid;
-  border-left: 1px black solid;
   font-family: "roboko", sans-serif;
 }
 
@@ -38,7 +36,6 @@ header {
 
 header a .ico {
   font-size: 20px;
-  width: 20%;
   color: initial;
 }
 
@@ -182,7 +179,6 @@ header h1 {
           box-shadow: 0px 4px 5px 0px #c4c4c4;
   cursor: pointer;
   overflow: hidden;
-  position: relative;
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -213,25 +209,24 @@ header h1 {
           flex-direction: column;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
   width: 80%;
 }
 
 .menu--txt_dekstop .fiche--titre h3 {
   margin: 0;
-  padding-bottom: 6px;
+  padding-bottom: 8px;
   font-size: 16px;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu--txt_dekstop .fiche--titre p {
   margin: 0;
   font-size: 16px;
-  text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .menu--txt_dekstop .fiche--prix {
@@ -265,7 +260,7 @@ header h1 {
 
 .menu--txt_dekstop .fiche--check i {
   margin: auto;
-  padding: 29px;
+  padding: 26px;
   color: white;
   font-size: 20px;
   -webkit-transition: all 0.6s 0.2s;
@@ -310,10 +305,12 @@ header h1 {
 }
 
 .menu--commande:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(147, 86, 220, 0.9)), to(rgba(255, 121, 218, 0.9)));
+  background: linear-gradient(rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-box-shadow: 0px 4px 5px 0px #9c9c9c;
+          box-shadow: 0px 4px 5px 0px #9c9c9c;
 }
 
 .bdp {
@@ -431,7 +428,6 @@ header h1 {
   .menu--txt .fiche {
     width: 60%;
     margin: auto;
-    margin-bottom: 15px;
   }
   .menu--commande {
     width: 25%;

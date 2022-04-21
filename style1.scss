@@ -34,8 +34,6 @@ cursive;
 #bloc_page {
     max-width: 768px;
     margin: auto;
-    border-right: 1px black solid;
-    border-left: 1px black solid;
     font-family: $police-txt;
 }
 
@@ -48,7 +46,6 @@ header {
 
         & .ico {
             font-size: 20px;
-            width: 20%;
             color: initial;
 
 
@@ -199,7 +196,6 @@ header {
                 box-shadow: 0px 4px 5px 0px #c4c4c4;
                 cursor: pointer;
                 overflow: hidden;
-                position: relative;
                 transform: translateY(0);
 
 
@@ -223,30 +219,27 @@ header {
                     flex-direction: column;
                     overflow: hidden;
                     white-space: nowrap;
-                    text-overflow: ellipsis;
                     width: 80%;
 
 
                     & h3 {
                         margin: 0;
-                        padding-bottom: 6px;
+                        padding-bottom: 8px;
                         font-size: 16px;
-                        text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
-
+                        text-overflow: ellipsis;
+                        
                     }
 
                     & p {
                         margin: 0;
                         font-size: 16px;
-                        text-overflow: ellipsis;
                         overflow: hidden;
                         white-space: nowrap;
+                        text-overflow: ellipsis;
+                        
                     }
-
-
-
 
                 }
 
@@ -263,11 +256,6 @@ header {
                     & span {
                         font-size: 17px;
                         font-weight: bold;
-
-
-
-
-
                     }
 
                 }
@@ -280,13 +268,9 @@ header {
                     height: 100%;
 
 
-
-
-
-
                     & i {
                         margin: auto;
-                        padding: 29px;
+                        padding: 26px;
                         color: white;
                         font-size: 20px;
                         transition: all 0.6s 0.2s;
@@ -294,9 +278,6 @@ header {
                         display: block;
 
                     }
-
-
-
 
                 }
 
@@ -340,8 +321,9 @@ header {
 
 
         &:hover {
-            background: linear-gradient($color-primary, $color-secondary);
+            background:linear-gradient(rgba($color-primary,0.9), rgba($color-secondary,0.9));
             transform: scale(1.05);
+            box-shadow: 0px 4px 5px 0px #9c9c9c;
         }
 
 
@@ -491,7 +473,6 @@ header {
             & .fiche {
                 width: 60%;
                 margin: auto;
-                margin-bottom: 15px;
 
             }
 

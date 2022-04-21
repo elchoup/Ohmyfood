@@ -5,17 +5,19 @@
     -webkit-transform: translateY(5px);
             transform: translateY(5px);
   }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
   80% {
     color: #9356DC;
     text-shadow: none;
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
   }
   100% {
     color: #FF79DA;
     text-shadow: 0 0 5px #FF79DA;
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
 }
 
@@ -26,17 +28,19 @@
     -webkit-transform: translateY(5px);
             transform: translateY(5px);
   }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
   80% {
     color: #9356DC;
     text-shadow: none;
-    -webkit-transform: translateY(-3px);
-            transform: translateY(-3px);
   }
   100% {
     color: #FF79DA;
     text-shadow: 0 0 5px #FF79DA;
-    -webkit-transform: translateY(-5px);
-            transform: translateY(-5px);
+    -webkit-transform: translateY(5px);
+            transform: translateY(5px);
   }
 }
 
@@ -150,7 +154,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   background: white;
-  background-size: cover;
   color: #9356DC;
   font-family: "Shrikhand", cursive;
   opacity: 0;
@@ -212,8 +215,6 @@
   margin: auto;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  border-right: 1px black solid;
-  border-left: 1px black solid;
   font-family: "roboko", sans-serif;
   -webkit-animation: debut-main 3s ease-in;
           animation: debut-main 3s ease-in;
@@ -301,10 +302,12 @@ header h1 {
 }
 
 .explore a:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(147, 86, 220, 0.9)), to(rgba(255, 121, 218, 0.9)));
+  background: linear-gradient(rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
+  -webkit-box-shadow: 0px 4px 5px 0px #9c9c9c;
+          box-shadow: 0px 4px 5px 0px #9c9c9c;
 }
 
 .fonctionnement h2 {
@@ -375,6 +378,8 @@ header h1 {
   background: rgba(147, 86, 220, 0.1);
   -webkit-transform: scale(1.07);
           transform: scale(1.07);
+  -webkit-box-shadow: 0px 4px 5px 0px #9c9c9c;
+          box-shadow: 0px 4px 5px 0px #9c9c9c;
 }
 
 .fonctionnement--nav li:hover i {
@@ -449,7 +454,6 @@ header h1 {
 .presentation--fig--img p {
   position: absolute;
   border-radius: 3px;
-  text-align: end;
   font-size: 12px;
   background: #99E2D0;
   font-weight: bold;

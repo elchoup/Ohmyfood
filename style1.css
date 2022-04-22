@@ -20,6 +20,10 @@
   }
 }
 
+body {
+  margin: 0;
+}
+
 #bloc_page {
   max-width: 768px;
   margin: auto;
@@ -198,6 +202,11 @@ header h1 {
           animation: fiche-up 1.9s ease-in-out;
 }
 
+.menu--txt_dekstop .fiche:nth-child(4) {
+  -webkit-animation: fiche-up 2.2s ease-in-out;
+          animation: fiche-up 2.2s ease-in-out;
+}
+
 .menu--txt_dekstop .fiche--titre {
   padding: 13px;
   display: -webkit-box;
@@ -305,8 +314,8 @@ header h1 {
 }
 
 .menu--commande:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(147, 86, 220, 0.9)), to(rgba(255, 121, 218, 0.9)));
-  background: linear-gradient(rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background: -webkit-gradient(linear, left top, left bottom, from(#9b65db), to(#ef7fd0));
+  background: linear-gradient(#9b65db, #ef7fd0);
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
   -webkit-box-shadow: 0px 4px 5px 0px #9c9c9c;

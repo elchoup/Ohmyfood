@@ -3,7 +3,8 @@ $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
 $police-txt:'roboko',
 sans-serif;
-$police-logo:'Shrikhand',cursive;
+$police-logo:'Shrikhand',
+cursive;
 
 @mixin a-comportement {
     text-decoration: none;
@@ -25,7 +26,7 @@ $police-logo:'Shrikhand',cursive;
         transform: translateY(5px);
     }
 
-    50%{
+    50% {
         transform: translateY(-5px);
     }
 
@@ -80,23 +81,24 @@ $police-logo:'Shrikhand',cursive;
 }
 
 
-@keyframes clignote{
-    0%{
+@keyframes clignote {
+    0% {
         opacity: 0;
     }
 
-    2%{
+    2% {
         opacity: 0;
     }
 
-    3%{
+    3% {
         opacity: 1;
     }
 
-    50%{
-        opacity:1;
+    50% {
+        opacity: 1;
     }
-    100%{
+
+    100% {
         opacity: 0;
     }
 }
@@ -153,13 +155,14 @@ $police-logo:'Shrikhand',cursive;
             animation-delay: 0.8s;
         }
 
-
     }
 
 
 }
 
-
+body {
+    margin: 0;
+}
 
 
 #bloc_page {
@@ -170,8 +173,6 @@ $police-logo:'Shrikhand',cursive;
     animation: debut-main 3s ease-in;
 }
 
-
-
 header {
     text-align: center;
     font-family: $police-logo;
@@ -180,9 +181,6 @@ header {
         font-size: 40px;
         margin: 10px;
     }
-
-
-
 }
 
 
@@ -244,7 +242,7 @@ header {
         transition: all 500ms;
 
         &:hover {
-            background:linear-gradient(rgba($color-primary,0.9), rgba($color-secondary,0.9));
+            background: linear-gradient(#9b65db, #ef7fd0);
             transform: scale(1.05);
             box-shadow: 0px 4px 5px 0px #9c9c9c;
         }
@@ -296,7 +294,7 @@ header {
                     font-size: 10px;
                     color: white;
                     margin-left: -10px;
-                    counter-increment:section 1;
+                    counter-increment: section 1;
                     content: counter(section);
 
                 }
@@ -304,17 +302,13 @@ header {
                 & i {
                     margin-left: 30px;
                     color: #969696;
-
-
                 }
 
 
                 & h4 {
                     margin-left: 6%;
                     font-size: 13px;
-
                 }
-
             }
 
 
@@ -326,19 +320,8 @@ header {
                 & i {
                     color: $color-primary;
                 }
-
             }
-
-
         }
-
-
-
-
-
-
-
-
     }
 }
 
@@ -367,9 +350,7 @@ header {
             &:hover {
                 transform: scale(1.05);
             }
-
         }
-
     }
 
 
@@ -407,8 +388,6 @@ header {
                 padding-right: 15px;
                 right: 15px;
                 animation: clignote 4s ease-out infinite;
-                
-                
             }
         }
 
@@ -440,8 +419,6 @@ header {
                 padding-bottom: 15px;
 
             }
-
-
         }
 
         & i {
@@ -470,13 +447,7 @@ header {
                 }
             }
         }
-
     }
-
-
-
-
-
 }
 
 .bdp {
@@ -518,9 +489,6 @@ header {
                     margin-right: 15px;
                 }
             }
-
-
-
         }
     }
 }
@@ -586,18 +554,8 @@ header {
                 & h4 {
                     font-size: 15px;
                 }
-
             }
-
-
-
-
-
-
         }
-
-
-
     }
 
     .presentation {
@@ -637,9 +595,7 @@ header {
                         font-size: 17px;
                     }
                 }
-
             }
-
         }
     }
 

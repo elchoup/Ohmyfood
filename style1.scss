@@ -30,6 +30,10 @@ cursive;
     }
 }
 
+body {
+    margin: 0;
+}
+
 
 #bloc_page {
     max-width: 768px;
@@ -130,18 +134,8 @@ header {
                     }
                 }
             }
-
-
-
-
-
-
-
-
         }
-
     }
-
 }
 
 .menu {
@@ -178,9 +172,6 @@ header {
         }
 
 
-
-
-
         &_dekstop {
             display: flex;
             flex-direction: column;
@@ -212,6 +203,10 @@ header {
                     animation: fiche-up 1.9s ease-in-out;
                 }
 
+                &:nth-child(4) {
+                    animation: fiche-up 2.2s ease-in-out;
+                }
+
 
                 &--titre {
                     padding: 13px;
@@ -229,7 +224,7 @@ header {
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
-                        
+
                     }
 
                     & p {
@@ -238,7 +233,7 @@ header {
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
-                        
+
                     }
 
                 }
@@ -294,8 +289,6 @@ header {
                         transform: rotate(360deg);
                     }
                 }
-
-
             }
         }
     }
@@ -321,17 +314,11 @@ header {
 
 
         &:hover {
-            background:linear-gradient(rgba($color-primary,0.9), rgba($color-secondary,0.9));
+            background: linear-gradient(#9b65db, #ef7fd0);
             transform: scale(1.05);
             box-shadow: 0px 4px 5px 0px #9c9c9c;
         }
-
-
-
-
-
     }
-
 }
 
 
@@ -374,9 +361,6 @@ header {
                     margin-right: 15px;
                 }
             }
-
-
-
         }
     }
 }
@@ -398,8 +382,6 @@ header {
         & h1 {
             font-size: 60px;
         }
-
-
     }
 
 
@@ -454,8 +436,6 @@ header {
         & h1 {
             font-size: 60px;
         }
-
-
     }
 
     .menu {
@@ -475,14 +455,10 @@ header {
                 margin: auto;
 
             }
-
-
         }
 
         &--commande {
             width: 25%;
         }
     }
-
-
 }

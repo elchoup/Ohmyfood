@@ -196,15 +196,18 @@ header {
                 }
 
                 &:nth-child(2) {
-                    animation: fiche-up 1.6s ease-in-out;
+                    animation: fiche-up 1.3s 0.1s ease-in-out;
+                    animation-fill-mode: backwards;
                 }
 
                 &:nth-child(3) {
-                    animation: fiche-up 1.9s ease-in-out;
+                    animation: fiche-up 1.3s 0.2s ease-in-out;
+                    animation-fill-mode: backwards;
                 }
 
                 &:nth-child(4) {
-                    animation: fiche-up 2.2s ease-in-out;
+                    animation: fiche-up 1.3s 0.3s ease-in-out;
+                    animation-fill-mode: backwards;
                 }
 
 
